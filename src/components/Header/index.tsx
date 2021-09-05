@@ -1,3 +1,18 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import Link from 'next/link';
+import style from './header.module.scss';
+
 export default function Header() {
-  // TODO
+  return (
+    <header className={style.header}>
+      <div className={style.content}>
+        <Link href="/">
+          <a>
+            <img src="/images/logo.svg" alt="logo" />
+          </a>
+        </Link>
+      </div>
+    </header>
+  );
 }
