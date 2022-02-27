@@ -138,7 +138,7 @@ export default function Post({
 
         <div className={styles.nextAndPrevious}>
           <div className={styles.button}>
-            {previousPost.uid && (
+            {previousPost?.uid.length > 0 && (
               <Link href={`/post/${previousPost.uid}`}>
                 <a>
                   <span>{previousPost.title}</span>
@@ -149,7 +149,7 @@ export default function Post({
           </div>
 
           <div className={styles.button}>
-            {nextPost.uid && (
+            {nextPost?.uid.length > 0 && (
               <Link href={`/post/${nextPost.uid}`}>
                 <a>
                   <span>{nextPost.title}</span>
